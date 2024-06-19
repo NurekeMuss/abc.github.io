@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
     --main-font: 'Exo 2', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+.right {
+    padding-left: 50px;
 }
 
 * {
@@ -56,15 +61,18 @@ nav {
 
 /* Buttons */
 
+.basic {
+    background: #EF7F1A;
+    border-radius: 34px;
+    border: none;
+}
+
 .active {
     width: 188.74px;
     height: 36.33px;
-    top: 53.28px;
-    left: 1101.83px;
     gap: 0px;
     border-radius: 23px;
     opacity: 0px;
-    background: #EF7F1A;
     border: none;
     color: white;
 }
@@ -72,14 +80,11 @@ nav {
 .passive {
     width: 232.72px;
     height: 50px;
-    top: 524.29px;
-    left: 305.28px;
-    gap: 0px;
-    border-radius: 34px;
     opacity: 0px;
-    background: none;
     border: 1px solid white;
     color: white;
+    background: none;
+    border-radius: 34px;
 }
 
 .passive h2 {
@@ -130,6 +135,26 @@ nav {
     text-transform: uppercase;
 }
 
+.const-btn__submit {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 192.57px;
+    height: 50px;
+    gap: 0px;
+}
+
+.const-btn__submit h2 {
+    color: white;
+    font-family: var(--main-font);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+
 
 /* main pages */
 
@@ -163,7 +188,7 @@ nav {
     display: flex;
     flex-direction: column;
     position: fixed;
-    bottom: 125px;
+    /*     bottom: 125px; */
     right: 55px;
 }
 
@@ -291,7 +316,7 @@ nav {
 /* Service */
 
 .service {
-    margin-top: 150px;
+    padding-top: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -330,6 +355,12 @@ nav {
 .service-detail__img {
     display: flex;
     justify-content: space-around;
+}
+
+.service-detail__img img:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+    transition-timing-function: ease;
 }
 
 
@@ -399,7 +430,6 @@ nav {
 .cons {
     padding-top: 100px;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -421,4 +451,140 @@ nav {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.55);
     border-radius: 50px;
+}
+
+.cons-text {
+    position: absolute;
+    padding-left: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 35px;
+}
+
+.cons-text h1 {
+    font-family: var(--main-font);
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 50.4px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.cons-text p {
+    color: #D2D2D2;
+    font-family: var(--main-font);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+
+input {
+    width: 250.51px;
+    height: 50px;
+    top: 2412.29px;
+    left: 150px;
+    gap: 0px;
+    border-radius: 34px;
+    opacity: 0px;
+    border: none;
+    padding-left: 10px;
+}
+
+.cons-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+
+/* Как мы работаем */
+
+.steps {
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.step-text h1 {
+    font-family: var(--main-font);
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 50.4px;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.step-detail {
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.down img {
+    width: 53.63px;
+    height: 38.92px;
+    top: 2965.4px;
+    left: 260.58px;
+    gap: 0px;
+    border: 2px;
+    opacity: 0px;
+}
+
+.up {
+    display: flex;
+    justify-content: space-between;
+}
+
+.up img {
+    width: 53.63px;
+    height: 38.92px;
+    top: 3027.34px;
+    left: 451.49px;
+    gap: 0px;
+    border: 2px;
+    opacity: 0px;
+}
+
+.step-detail__info {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.step-detail__text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step-detail__text h1 {
+    font-family: var(--main-font);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    color: #EF7F1A;
+    text-transform: uppercase;
+}
+
+.step-detail__text p {
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: left;
+    color: #151515;
+}
+
+.step-detail__down {
+    padding-top: 250px;
 }

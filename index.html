@@ -21,7 +21,7 @@
             <a href="/about-us">Обьявления</a>
             <a href="/about-us">КОНТАКТЫ</a>
         </nav>
-        <button class="active">
+        <button class="active basic">
             <h2>Заказать звонок</h2>
         </button>
     </header>
@@ -68,15 +68,15 @@
         </div>
         <div class="service-detail">
             <div class="service-detail__img">
-                <img src="./img/service1.png" alt="">
-                <img src="./img/service2.png" alt="">
-                <img src="./img/service3.png" alt="">
+                <a href=""><img src="./img/service1.png" alt=""></a>
+                <a href=""><img src="./img/service2.png" alt=""></a>
+                <a href=""><img src="./img/service3.png" alt=""></a>
             </div>
         </div>
         <div class="service-detail">
             <div class="service-detail__img">
-                <img src="./img/service4.png" alt="">
-                <img src="./img/service5.png" alt="">
+                <a href=""><img src="./img/service4.png" alt=""></a>
+                <a href=""><img src="./img/service5.png" alt=""></a>
             </div>
         </div>
     </div>
@@ -116,15 +116,85 @@
         <div class="cons-img"></div>
         <div class="div"></div>
         <div class="cons-text">
-
+            <h1>Получить консультацию <br> специалиста</h1>
+            <p>Оставьте заявку, наш менеджер свяжется с Вами в течение <br> часа и проконсультирует Вас по всем вопросам.</p>
             <div class="cons-input">
+                <form action="/action-page.php">
+                    <input type="text" id="fname" name="firstname" placeholder="Имя">
 
+                    <input type="text" id="lname" name="lastname" placeholder="Номер телефона">
+                </form>
             </div>
-
             <div class="cons-btn">
-
+                <button class="const-btn__submit basic"><h2>Отправить</h2></button>
+                <a href=""><img src="./img/cons-call.png" alt=""></a>
             </div>
+        </div>
+    </div>
 
+    <!-- Как мы работаем -->
+    <div class="steps right">
+        <div class="step-text">
+            <h1>Как мы работаем</h1>
+        </div>
+        <div class="step-detail">
+            <div class="step-detail__info">
+                <img src="./img/steps/fisrt.png" alt="">
+                <div class="step-detail__text">
+                    <h1>1-этап</h1>
+                    <p>Вы оставляете заявку на <br> сайте или звоните по <br> телефонам</p>
+                </div>
+            </div>
+            <div class="down">
+                <img src="./img/steps/down.png" alt="" class="down">
+            </div>
+            <div class="step-detail__down">
+                <img src="./img/steps/second.png" alt="">
+                <div class="step-detail__text">
+                    <h1>2-этап</h1>
+                    <p>Специалист выезжает <br> к вам на объект</p>
+                </div>
+            </div>
+            <div class="up">
+                <img src="./img/steps/up.png" alt="">
+            </div>
+            <div class="step-detail__info">
+                <img src="./img/steps/third.png" alt="">
+                <div class="step-detail__text">
+                    <h1>3-этап</h1>
+                    <p>Составляет смету и <br> согласовывает ее с <br> заказчиком</p>
+                </div>
+            </div>
+            <div class="down">
+                <img src="./img/steps/down.png" alt="" class="down">
+            </div>
+            <div class="step-detail__down">
+                <img src="./img/steps/four.png" alt="">
+                <div class="step-detail__text">
+                    <h1>4-этап</h1>
+                    <p>Заключаем договор и <br> приступаем к работе</p>
+                </div>
+            </div>
+            <div class="up">
+                <img src="./img/steps/up.png" alt="">
+            </div>
+            <div class="step-detail__info">
+                <img src="./img/steps/five.png" alt="">
+                <div class="step-detail__text">
+                    <h1>5-этап</h1>
+                    <p>Сдаем объект <br> заказчику</p>
+                </div>
+            </div>
+            <div class="down">
+                <img src="./img/steps/down.png" alt="" class="down">
+            </div>
+            <div class="step-detail__down">
+                <img src="./img/steps/six.png" alt="">
+                <div class="step-detail__text">
+                    <h1>6-этап</h1>
+                    <p>Объект переходит <br> на гарантийное <br> обслуживание</p>
+                </div>
+            </div>
         </div>
     </div>
 </body>
