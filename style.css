@@ -588,3 +588,49 @@ input {
 .step-detail__down {
     padding-top: 250px;
 }
+
+.txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* ADS CAROUSEL */
+
+.container {
+    width: 80%;
+    /* Adjust the width as needed */
+    margin: 0 auto;
+    /* Center the container horizontally */
+}
+
+.ads-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ads-text h1 {
+    font-size: 50px;
+}
+
+.swiper {
+    width: 100%;
+    /* Make sure the swiper takes the full width of its parent container */
+}
+
+.swiper-slide {
+    text-align: center;
+    /* Center the content of each slide if necessary */
+}
+
+.img_box {
+    display: flex;
+    justify-content: center;
+    /* Center the image within the box */
+    align-items: center;
+    /* Center the image vertically */
+}

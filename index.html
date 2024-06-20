@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
+
     <title>ABC Design</title>
 </head>
 
@@ -53,11 +54,28 @@
     <!-- Modal Structure -->
     <div id="modal" class="modal">
         <div class="modal-content">
+            <button id="closeModalBtn"><h3>X</h3></button>
             <div class="modal-bgImage"></div>
             <div class="modal-text">
-                <h1>Modal Title</h1>
-                <p>Modal content goes here...</p>
-                <button id="closeModalBtn">Close</button>
+
+                <div class="cons-text__modal">
+                    <h1>Получить консультацию <br> специалиста</h1>
+                    <p>Оставьте заявку, наш менеджер свяжется с Вами в течение <br> часа и проконсультирует Вас по всем вопросам.</p>
+                    <div class="cons-input">
+                        <form action="/action-page.php">
+                            <input type="text" id="fname" name="firstname" placeholder="Имя">
+
+                            <input type="text" id="lname" name="lastname" placeholder="Номер телефона">
+                        </form>
+                    </div>
+                    <div class="cons-btn">
+                        <button class="const-btn__submit basic"><h2>Отправить</h2></button>
+                        <a href=""><img src="./img/cons-call.png" alt=""></a>
+                    </div>
+                </div>
+                <!-- <h1>Modal Title</h1>
+                <p>Modal content goes here...</p> -->
+
             </div>
         </div>
     </div>
@@ -249,7 +267,8 @@
                     <div class="image-content">
                         <span class="overlay"></span>
                         <div class="card-image">
-                        <img src="./img/carousel/img1.png" alt="" class="card-img">    <!--<img src="images/profile4.jpg" alt="" class="card-img">-->
+                            <img src="./img/carousel/img1.png" alt="" class="card-img">
+                            <!--<img src="images/profile4.jpg" alt="" class="card-img">-->
                         </div>
                     </div>
                     <div class="card-content">
@@ -261,7 +280,8 @@
                     <div class="image-content">
                         <span class="overlay"></span>
                         <div class="card-image">
-                        <img src="./img/carousel/img2.png" alt="" class="card-img">    <!--<img src="images/profile5.jpg" alt="" class="card-img">-->
+                            <img src="./img/carousel/img2.png" alt="" class="card-img">
+                            <!--<img src="images/profile5.jpg" alt="" class="card-img">-->
                         </div>
                     </div>
                     <div class="card-content">
@@ -273,7 +293,8 @@
                     <div class="image-content">
                         <span class="overlay"></span>
                         <div class="card-image">
-                        <img src="./img/carousel/img3.png" alt="" class="card-img">    <!--<img src="images/profile6.jpg" alt="" class="card-img">-->
+                            <img src="./img/carousel/img3.png" alt="" class="card-img">
+                            <!--<img src="images/profile6.jpg" alt="" class="card-img">-->
                         </div>
                     </div>
                     <div class="card-content">
@@ -285,7 +306,8 @@
                     <div class="image-content">
                         <span class="overlay"></span>
                         <div class="card-image">
-                        <img src="./img/carousel/img2.png" alt="" class="card-img">    <!--<img src="images/profile7.jpg" alt="" class="card-img">-->
+                            <img src="./img/carousel/img2.png" alt="" class="card-img">
+                            <!--<img src="images/profile7.jpg" alt="" class="card-img">-->
                         </div>
                     </div>
                     <div class="card-content">
@@ -297,7 +319,8 @@
                     <div class="image-content">
                         <span class="overlay"></span>
                         <div class="card-image">
-                        <img src="./img/carousel/img3.png" alt="" class="card-img">    <!--<img src="images/profile8.jpg" alt="" class="card-img">-->
+                            <img src="./img/carousel/img3.png" alt="" class="card-img">
+                            <!--<img src="images/profile8.jpg" alt="" class="card-img">-->
                         </div>
                     </div>
                     <div class="card-content">
@@ -338,14 +361,13 @@
                     <div class="carousel-item"><img src="./img/certificate.png" alt="Image 1"></div>
                     <div class="carousel-item"><img src="./img/certificate.png" alt="Image 2"></div>
                     <div class="carousel-item"><img src="./img/certificate.png" alt="Image 3"></div>
-                    <div class="carousel-item"><img src="./img/certificate.png" alt="Image 4"></div>
-                    <div class="carousel-item"><img src="./img/certificate.png" alt="Image 5"></div>
+                    <div class="carousel-item"><img src="./img/cons-call.png" alt="Image 4"></div>
+                    <div class="carousel-item"><img src="./img/service5.png" alt="Image 5"></div>
                     <div class="carousel-item"><img src="./img/certificate.png" alt="Image 6"></div>
                     <div class="carousel-item"><img src="./img/certificate.png" alt="Image 7"></div>
                     <div class="carousel-item"><img src="./img/certificate.png" alt="Image 8"></div>
                     <div class="carousel-item"><img src="./img/certificate.png" alt="Image 9"></div>
                     <div class="carousel-item"><img src="./img/certificate.png" alt="Image 10"></div>
-                    <!-- Add more images if needed -->
                 </div>
             </div>
             <button class="arrow right-arrow" onclick="moveCarousel(1)">&#10095;</button>
@@ -363,18 +385,10 @@
                 <h1>О нас</h1>
             </div>
             <div class="about-text__decs">
-                <p>Надежность и эффективность защитного комплекса любого объекта <br>
-                    зависит от правильно выполненных проектных, установочных и <br>
-                    пусконаладочных работ. Поэтому при установке необходимых Вам <br>
-                    систем безопасности следует довериться профессионалам. <br>
-                    <br>
-                    Мы - команда профессионалов, предлагающая широкий спектр <br>
-                    услуг в области безопасности. <br>
-                    <br>
-                    Наша цель - обеспечить вас надежной защитой и спокойствием, <br> 
-                    позволяя сосредоточиться на вашем бизнесе или повседневных <br>
-                    делах. Обратитесь к нам, и мы поможем создать безопасное <br>
-                    окружение для вас и ваших близких.</p>
+                <p>Надежность и эффективность защитного комплекса любого объекта <br> зависит от правильно выполненных проектных, установочных и <br> пусконаладочных работ. Поэтому при установке необходимых Вам <br> систем безопасности следует довериться
+                    профессионалам. <br>
+                    <br> Мы - команда профессионалов, предлагающая широкий спектр <br> услуг в области безопасности. <br>
+                    <br> Наша цель - обеспечить вас надежной защитой и спокойствием, <br> позволяя сосредоточиться на вашем бизнесе или повседневных <br> делах. Обратитесь к нам, и мы поможем создать безопасное <br> окружение для вас и ваших близких.</p>
             </div>
         </div>
     </div>
@@ -393,7 +407,8 @@
                             <p class="quote">“</p>
                             <h3>TOO «INFO»</h3>
                             <p class="stars">★★★★★</p>
-                            <p class="decs">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Здесь будет мини-описание. Это текст о компании. Он необходим для дальнейшего продвижения.</p>
+                            <p class="decs">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Здесь будет мини-описание. Это текст о компании. Он необходим
+                                для дальнейшего продвижения.</p>
                             <p>16.04.2024</p>
                         </div>
                     </div>
@@ -402,7 +417,8 @@
                             <p class="quote">“</p>
                             <h3>TOO «INFO»</h3>
                             <p class="stars">★★★★★</p>
-                            <p class="decs">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Здесь будет мини-описание. Это текст о компании. Он необходим для дальнейшего продвижения.</p>
+                            <p class="decs">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Здесь будет мини-описание. Это текст о компании. Он необходим
+                                для дальнейшего продвижения.</p>
                             <p>16.04.2024</p>
                         </div>
                     </div>
@@ -411,7 +427,8 @@
                             <p class="quote">“</p>
                             <h3>TOO «INFO»</h3>
                             <p class="stars">★★★★★</p>
-                            <p class="decs">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Здесь будет мини-описание. Это текст о компании. Он необходим для дальнейшего продвижения.</p>
+                            <p class="decs">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Здесь будет мини-описание. Это текст о компании. Он необходим
+                                для дальнейшего продвижения.</p>
                             <p>16.04.2024</p>
                         </div>
                     </div>
@@ -424,7 +441,139 @@
             <!-- Pagination buttons will be dynamically added here -->
         </div>
     </div>
+    <!-- ads -->
+    <div class="ads-text">
+        <h1>Объявления</h1>
+        <p>Скидки, акции и предложения</p>
+    </div>
+    <div class="container">
+        <div class="swiper card__slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="./img/ads/ads1.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Здесь будет объявление</h2>
+                        <p class="description">Мини описание. Необходимы данные.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="./img/ads/ads2.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Здесь будет объявление</h2>
+                        <p class="description">Мини описание. Необходимы данные.</p>
+                    </div>
 
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="./img/ads/ads3.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Здесь будет объявление</h2>
+                        <p class="description">Мини описание. Необходимы данные.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="./img/ads/ads4.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Здесь будет объявление</h2>
+                        <p class="description">Мини описание. Необходимы данные.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="./img/ads/ads1.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Здесь будет объявление</h2>
+                        <p class="description">Мини описание. Необходимы данные.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="./img/ads/ads2.png" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="name">Здесь будет объявление</h2>
+                        <p class="description">Мини описание. Необходимы данные.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+    <!-- address -->
+    <div class="address right">
+        <img src="./img/address.png" alt="">
+        <div class="address-info">
+            <div class="address-info__title">
+                <h1>КОНТАКТЫ</h1>
+            </div>
+            <div class="address-info_detail">
+                <div class="more">
+                    <img src="./img/dot.png" alt="">
+                    <h3>Адресс:</h3>
+                </div>
+                <div class="more-second">
+                    <h2>РК, г. Астана, пр. Женис 29 <br> 204 офис, 2 этаж</h2>
+                </div>
+            </div>
+            <hr>
+            <div class="address-info_detail">
+                <div class="more">
+                    <img src="./img/phone.png" alt="">
+                    <h3>Телефон:</h3>
+                </div>
+                <div class="more-second">
+                    <h2>+7 (777) 777‒77‒77</h2>
+                </div>
+            </div>
+            <hr>
+            <div class="address-info_detail">
+                <div class="more">
+                    <img src="./img/mail.png" alt="">
+                    <h3>электронная почта:</h3>
+                </div>
+                <div class="more-second">
+                    <h2>info@mail.ru</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Photos -->
+    <div class="photos right">
+        <img src="./img/header.png" alt="">
+        <img src="./img/header.png" alt="">
+        <img src="./img/header.png" alt="">
+        <img src="./img/header.png" alt="">
+        <img src="./img/header.png" alt="">
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <img src="./img/header.png" alt="header" class="header-image">
+            <nav>
+                <a href="/about-us">О НАС</a>
+                <a href="#service">УСЛУГИ</a>
+                <a href="/about-us">Сертификаты</a>
+                <a href="/about-us">ОТЗЫВЫ</a>
+                <a href="/about-us">Обьявления</a>
+                <a href="/about-us">КОНТАКТЫ</a>
+            </nav>
+            <div class="icons">
+                <img src="./img/footer1.png" alt="">
+                <img src="./img/footer2.png" alt="">
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="main.js"></script>
