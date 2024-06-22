@@ -22,18 +22,11 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 0px;
-    opacity: 0px;
 }
 
 .header-image {
-    width: 299.8px;
-    height: 72.71px;
-    top: 19.15px;
-    left: 75px;
-    padding: 0.2px 0px 0.2px 0px;
-    gap: 0px;
-    opacity: 0px;
+    width: 300px;
+    height: 73px;
 }
 
 a {
@@ -44,18 +37,56 @@ a {
     font-weight: 500;
     line-height: 20.4px;
     text-align: left;
+    text-transform: uppercase;
 }
 
 nav {
-    width: 641px;
-    height: 21px;
-    top: 59px;
-    left: 427px;
-    gap: 28px;
-    opacity: 0px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.basic {
+    background: #EF7F1A;
+    border-radius: 34px;
+    border: none;
+}
+
+.active {
+    width: 189px;
+    height: 36px;
+    border-radius: 23px;
+    color: white;
 }
 
 
@@ -681,30 +712,6 @@ input {
     padding: 25px 0;
 }
 
-.overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 25px 25px 0 25px;
-}
-
-.overlay::before,
-.overlay::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-    height: 40px;
-    width: 40px;
-    background-color: #4070F4;
-}
-
-.overlay::after {
-    background-color: #FFF;
-}
-
 .card-image {
     position: relative;
     width: 381px;
@@ -1114,7 +1121,7 @@ input {
 .address {
     padding-top: 120px;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
     gap: 100px;
 }
@@ -1130,10 +1137,15 @@ input {
 }
 
 .address-info {
+    width: 384px;
+    height: 450.75px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     gap: 25px;
+    background: #F5F5F5;
 }
 
 .address-info_detail {

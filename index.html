@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
     <link rel="stylesheet" href="./style/swiper-bundle.min.css">
 
     <title>ABC Design</title>
@@ -16,13 +17,20 @@
 
     <header class="header">
         <img src="./img/header.png" alt="header" class="header-image">
-        <nav>
-            <a href="/about-us">О НАС</a>
-            <a href="#service">УСЛУГИ</a>
-            <a href="/about-us">Сертификаты</a>
-            <a href="/about-us">ОТЗЫВЫ</a>
-            <a href="/about-us">Обьявления</a>
-            <a href="/about-us">КОНТАКТЫ</a>
+        <nav class="nav">
+            <div class="burger-menu" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="/about-us">О НАС</a>
+                <a href="#service">УСЛУГИ</a>
+                <a href="/about-us">Сертификаты</a>
+                <a href="/about-us">ОТЗЫВЫ</a>
+                <a href="/about-us">Обьявления</a>
+                <a href="/about-us">КОНТАКТЫ</a>
+            </div>
         </nav>
         <button class="active basic">
             <h2>Заказать звонок</h2>
@@ -95,8 +103,8 @@
         </div>
         <div class="service-detail">
             <div class="service-detail__img">
-                <a href=""><img src="./img/service4.png" alt=""></a>
-                <a href=""><img src="./img/service5.png" alt=""></a>
+                <a href="" ><img src="./img/service4.png" alt=""class="img4"></a>
+                <a href="" ><img src="./img/service5.png" alt=""class="img5"></a>
             </div>
         </div>
     </div>
@@ -451,7 +459,7 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="img_box">
-                        <img src="./img/ads/ads1.png" alt="">
+                        <img src="./img/ads/adver1.png" alt="">
                     </div>
                     <div class="card-content">
                         <h2 class="name">Здесь будет объявление</h2>
@@ -460,7 +468,7 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="img_box">
-                        <img src="./img/ads/ads2.png" alt="">
+                        <img src="./img/ads/adver2.png" alt="">
                     </div>
                     <div class="card-content">
                         <h2 class="name">Здесь будет объявление</h2>
@@ -470,7 +478,7 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="img_box">
-                        <img src="./img/ads/ads3.png" alt="">
+                        <img src="./img/ads/adver3.png" alt="">
                     </div>
                     <div class="card-content">
                         <h2 class="name">Здесь будет объявление</h2>
@@ -479,7 +487,7 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="img_box">
-                        <img src="./img/ads/ads4.png" alt="">
+                        <img src="./img/ads/adver4.png" alt="">
                     </div>
                     <div class="card-content">
                         <h2 class="name">Здесь будет объявление</h2>
@@ -488,7 +496,7 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="img_box">
-                        <img src="./img/ads/ads1.png" alt="">
+                        <img src="./img/ads/adver1.png" alt="">
                     </div>
                     <div class="card-content">
                         <h2 class="name">Здесь будет объявление</h2>
@@ -497,7 +505,7 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="img_box">
-                        <img src="./img/ads/ads2.png" alt="">
+                        <img src="./img/ads/adver2.png" alt="">
                     </div>
                     <div class="card-content">
                         <h2 class="name">Здесь будет объявление</h2>
@@ -512,7 +520,7 @@
 
     <!-- address -->
     <div class="address right">
-        <img src="./img/address.png" alt="">
+        <img src="./img/address.png" alt="" class="map">
         <div class="address-info">
             <div class="address-info__title">
                 <h1>КОНТАКТЫ</h1>
