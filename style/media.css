@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media (min-width: 375px) {
     .nav-links {
         display: none;
         flex-direction: column;
@@ -135,6 +135,34 @@
     .address .map{
         width: 400px;
         height: auto;
+    }
+
+    .photos{
+        display: none;
+    }
+    .main-page__text{
+        display: flex;
+        align-items: center;
+    }
+    .header button{
+        display: none;
+    }
+
+    .media{
+        position: fixed;
+        bottom: none;
+    }
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        background: #E3E3E3;
+    }
+    .footer nav{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 10px;
     }
 
     .nav-links,.reason-detail,.testimonial-carousel-inner {
