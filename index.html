@@ -9,34 +9,35 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/media.css">
     <link rel="stylesheet" href="./style/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
 
     <title>ABC Design</title>
 </head>
 
 <body>
 
-    <header class="header">
-        <img src="./img/header.png" alt="header" class="header-image">
-        <nav class="nav">
-            <div class="burger-menu" id="burger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="nav-links" id="nav-links">
-                <a href="/about-us">О НАС</a>
-                <a href="#service">УСЛУГИ</a>
-                <a href="/about-us">Сертификаты</a>
-                <a href="/about-us">ОТЗЫВЫ</a>
-                <a href="/about-us">Обьявления</a>
-                <a href="/about-us">КОНТАКТЫ</a>
-            </div>
+    <header>
+        <nav>
+            <ul class='nav-bar'>
+                <li class='logo'><a href='#'><img src='./img/header.png'/></a></li>
+                <input type='checkbox' id='check' />
+                <span class="menu">
+                    <li><a href="#about">о НАС</a></li>
+                    <li><a href="#service">УСЛУГИ</a></li>
+                    <li><a href="#certificate">Сертификаты</a></li>
+                    <li><a href="#feedback">Отзывы</a></li>
+                    <li><a href="#ads">Обьявления</a></li>
+                    <li><a href="#contact">КОНТАКТЫ</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
         </nav>
         <button class="active basic">
-            <h2>Заказать звонок</h2>
+            <a href="#cons">
+                <h2>Заказать звонок</h2></a>
         </button>
-    </header>
-
+        </header>
     <div class="main-page">
 
         <div class="main-page__bgImage"></div>
@@ -45,7 +46,7 @@
             <p>Оценим эффективность защиты <br> Вашей системы безопасности</p>
             <div class="main-page__btn">
                 <button class="btn" id="openModalBtn"><h2>Оставить заявки</h2></button>
-                <button class="passive"><h2>Посмтреть услуги</h2> </button>
+                <button class="passive"><a href="#service" class="button_link"><h2>Посмтреть услуги</h2></a> </button>
             </div>
             <div class=main-page__icons>
                 <div class="frame">
@@ -139,7 +140,7 @@
     </div>
 
     <!--consultation-->
-    <div class="cons">
+    <div class="cons" id="cons">
         <div class="div"></div>
         <div class="cons-img"></div>
         <div class="div"></div>
@@ -357,36 +358,52 @@
     </div>
 
     <!-- CAROUSEL CERTIFIACTE -->
-    <div class="carousel-container">
-        <div class="carousel">
-            <div class="carousel-text__cert">
-                <h1>Сертификаты и лицензии</h1>
-            </div>
-            <button class="arrow left-arrow" onclick="moveCarousel(-1)">&#10094;</button>
-            <div class="carousel-inner">
-                <div class="carousel-track">
-                    <!-- Add your images here -->
-                    <div class="carousel-item"><img src="./img/certificate.png" alt="Image 1"></div>
-                    <div class="carousel-item"><img src="./img/certificate.png" alt="Image 2"></div>
-                    <div class="carousel-item"><img src="./img/certificate.png" alt="Image 3"></div>
-                    <div class="carousel-item"><img src="./img/cons-call.png" alt="Image 4"></div>
-                    <div class="carousel-item"><img src="./img/service5.png" alt="Image 5"></div>
-                    <div class="carousel-item"><img src="./img/certificate.png" alt="Image 6"></div>
-                    <div class="carousel-item"><img src="./img/certificate.png" alt="Image 7"></div>
-                    <div class="carousel-item"><img src="./img/certificate.png" alt="Image 8"></div>
-                    <div class="carousel-item"><img src="./img/certificate.png" alt="Image 9"></div>
-                    <div class="carousel-item"><img src="./img/certificate.png" alt="Image 10"></div>
+    <div class="ads-text" id="certificate">
+        <h1>Сертификаты и лицензии</h1>
+    </div>
+    <div class="container">
+        <div class="swiper cert__slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="./img/certificate.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="./img/certificate.png" alt="">
+                    </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="./img/certificate.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="./img/certificate.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="./img/certificate.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="./img/certificate.png" alt="">
+                    </div>
                 </div>
             </div>
-            <button class="arrow right-arrow" onclick="moveCarousel(1)">&#10095;</button>
-        </div>
-        <div class="carousel-pagination">
-            <!-- Pagination buttons will be dynamically added here -->
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 
     <!-- ABOUT-US -->
-    <div class="about">
+    <div class="about" id="about">
         <img src="./img/about-us.png" alt="">
         <div class="about-text">
             <div class="about-text__title">
@@ -402,55 +419,81 @@
     </div>
 
     <!-- CAROUSEL FEEDBACK -->
-    <div class="testimonial-carousel-container">
-        <h2>Отзывы</h2>
-        <p>Лучшая награда для нас — благодарность довольных клиентов</p>
-        <div class="testimonial-carousel">
-            <button class="testimonial-arrow testimonial-left-arrow" onclick="moveCarousel(-1)">&#10094;</button>
-            <div class="testimonial-carousel-inner">
-                <div class="testimonial-carousel-track">
-                    <!-- Add your testimonials here -->
-                    <div class="testimonial-carousel-item">
-                        <div class="testimonial-content">
-                            <p class="quote">“</p>
-                            <h3>TOO «INFO»</h3>
-                            <p class="stars">★★★★★</p>
-                            <p class="decs">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Здесь будет мини-описание. Это текст о компании. Он необходим
-                                для дальнейшего продвижения.</p>
-                            <p>16.04.2024</p>
-                        </div>
+    <div class="ads-text" id="feedback">
+        <h1>ОТЗЫВЫ</h1>
+        <p>Лучшая награда для нас — благодарность довольных клиентов</p>
+    </div>
+    <div class="container">
+        <div class="swiper feed_slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial-content">
+                        <p class="quote">“</p>
+                        <h3>TOO «INFO»</h3>
+                        <p class="stars">★★★★★</p>
+                        <p class="decs">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Здесь будет мини-описание. Это текст о компании. Он необходим
+                            для дальнейшего продвижения.</p>
+                        <p>16.04.2024</p>
                     </div>
-                    <div class="testimonial-carousel-item">
-                        <div class="testimonial-content">
-                            <p class="quote">“</p>
-                            <h3>TOO «INFO»</h3>
-                            <p class="stars">★★★★★</p>
-                            <p class="decs">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Здесь будет мини-описание. Это текст о компании. Он необходим
-                                для дальнейшего продвижения.</p>
-                            <p>16.04.2024</p>
-                        </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-content">
+                        <p class="quote">“</p>
+                        <h3>TOO «INFO»</h3>
+                        <p class="stars">★★★★★</p>
+                        <p class="decs">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Здесь будет мини-описание. Это текст о компании. Он необходим
+                            для дальнейшего продвижения.</p>
+                        <p>16.04.2024</p>
                     </div>
-                    <div class="testimonial-carousel-item">
-                        <div class="testimonial-content">
-                            <p class="quote">“</p>
-                            <h3>TOO «INFO»</h3>
-                            <p class="stars">★★★★★</p>
-                            <p class="decs">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Здесь будет мини-описание. Это текст о компании. Он необходим
-                                для дальнейшего продвижения.</p>
-                            <p>16.04.2024</p>
-                        </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-content">
+                        <p class="quote">“</p>
+                        <h3>TOO «INFO»</h3>
+                        <p class="stars">★★★★★</p>
+                        <p class="decs">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Здесь будет мини-описание. Это текст о компании. Он необходим
+                            для дальнейшего продвижения.</p>
+                        <p>16.04.2024</p>
                     </div>
-                    <!-- Add more testimonials as needed -->
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-content">
+                        <p class="quote">“</p>
+                        <h3>TOO «INFO»</h3>
+                        <p class="stars">★★★★★</p>
+                        <p class="decs">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Здесь будет мини-описание. Это текст о компании. Он необходим
+                            для дальнейшего продвижения.</p>
+                        <p>16.04.2024</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-content">
+                        <p class="quote">“</p>
+                        <h3>TOO «INFO»</h3>
+                        <p class="stars">★★★★★</p>
+                        <p class="decs">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Здесь будет мини-описание. Это текст о компании. Он необходим
+                            для дальнейшего продвижения.</p>
+                        <p>16.04.2024</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-content">
+                        <p class="quote">“</p>
+                        <h3>TOO «INFO»</h3>
+                        <p class="stars">★★★★★</p>
+                        <p class="decs">Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры текст. Здесь будет мини-описание. Это текст о компании. Он необходим
+                            для дальнейшего продвижения.</p>
+                        <p>16.04.2024</p>
+                    </div>
                 </div>
             </div>
-            <button class="testimonial-arrow testimonial-right-arrow" onclick="moveCarousel(1)">&#10095;</button>
-        </div>
-        <div class="testimonial-carousel-pagination">
-            <!-- Pagination buttons will be dynamically added here -->
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
     <!-- ads -->
-    <div class="ads-text">
+    <div class="ads-text" id="ads">
         <h1>Объявления</h1>
         <p>Скидки, акции и предложения</p>
     </div>
@@ -519,7 +562,7 @@
 
 
     <!-- address -->
-    <div class="address right">
+    <div class="address right" id="contact">
         <img src="./img/address.png" alt="" class="map">
         <div class="address-info">
             <div class="address-info__title">
@@ -570,12 +613,12 @@
             <img src="./img/header.png" alt="header" class="header-image">
             <div class="footer-text">
                 <nav>
-                    <a href="/about-us">О НАС</a>
+                    <a href="#about">О НАС</a>
                     <a href="#service">УСЛУГИ</a>
-                    <a href="/about-us">Сертификаты</a>
-                    <a href="/about-us">ОТЗЫВЫ</a>
-                    <a href="/about-us">Обьявления</a>
-                    <a href="/about-us">КОНТАКТЫ</a>
+                    <a href="#certificate">Сертификаты</a>
+                    <a href="#feedback">ОТЗЫВЫ</a>
+                    <a href="#ads">ОБЬЯВЛЕНИЯ Объявления</a>
+                    <a href="#contact">КОНТАКТЫ</a>
                 </nav>
             </div>
 

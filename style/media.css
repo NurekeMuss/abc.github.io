@@ -1,98 +1,107 @@
-@media (min-width: 375px) {
-    .nav-links {
-        display: none;
+/* Стили для экранов до 768px */
+@media (max-width: 768px) {
+    /* HEADER PART */
+    .menu {
         flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color1);
+        transition: all 0.2s ease-in-out;
     }
-
-    .nav-links a {
-        padding: 15px;
-        border-bottom: 1px solid #ddd;
+    .menu li {
+        margin-top: 40px;
     }
-
-    .burger-menu {
+    .menu li a {
+        padding: 10px;
+    }
+    .open-menu, .close-menu {
+        display: block;
+    }
+    #check:checked ~ .menu {
+        right: 0;
+    }
+    header {
         display: flex;
+        flex-direction: column;
     }
-
-    .burger-menu.active + .nav-links {
+    nav {
         display: flex;
+        gap: 100px;
     }
-
-    .step-detail,.step-detail__down{
+    .step-detail, .step-detail__down {
         padding-top: 0;
         flex-direction: column;
         align-items: center;
     }
-    .about{
+    .about {
         flex-direction: column-reverse;
         align-items: flex-start;
-        gap:100px; 
+        gap: 100px; 
         padding-left: 50px;
     }
-
-    .about img{
+    .about img {
         width: 250px;
     }
-
-    .main-page{
+    /* MAIN PAGE PART */
+    .main-page {
         display: flex;
-        justify-content: space-between;
     }
-    .main-page__btn{
+    .main-page__btn {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
     }
-    .main-page__btn button{
+    .main-page__btn button {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 125px;
     }
-    .main-page__btn button h2{
+    .main-page__btn button h2 {
         font-size: 12px;
     }
-    
-    .main-page__text h1{
+    .main-page__text h1 {
         font-size: 20px;
     }
-    .main-page__text p{
+    .main-page__text p {
         font-size: 14px;
     }
-    .main-page__bgImage{
+    .main-page__bgImage {
         background-position: center top;
         background-size: auto;
     }
-    .main-page__bgImage::after{
+    .main-page__bgImage::after {
         content: '';
         position: absolute;
         width: 100%;
         height: 100%;
     }
-    
-    .service-detail__img{
+    /* SERVICE PART */
+    .service-detail__img {
         flex-direction: column;
         align-items: center;
     }
-    .service-detail__img .img4, .img5{
+    .service-detail__img .img4, .img5 {
         width: 400px;
     }
-    .cons{
+    /* CONSULTING PART */
+    .cons {
         display: flex;
         justify-content: space-evenly;
     }
-    .cons-img{
+    .cons-img {
         width: 700px;
         height: 700px;
         background-size: cover;
         background-position: center top;
     }
-    .cons-text{
+    .cons-text {
         padding-left: 110px;
         width: 450px;
         height: 550px;
@@ -100,72 +109,71 @@
         justify-content: space-between;
         flex-direction: column;
     }
-    .cons-text h1{
+    .cons-text h1 {
         font-size: 24px;
         width: 60%;
     }
-    .cons-text p{
+    .cons-text p {
         font-size: 14px;
         width: 60%;
     }
-    .cons-btn{
+    .cons-btn {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
     }
-    .const-btn__submit{
+    .const-btn__submit {
         width: 150px;
     }
-    form{
+    form {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         gap: 10px;
     }
-    input{
+    input {
         width: 150px;
     }
-
+    /* ADDRESS PART */
     .address {
         display: flex;
         justify-content: center;
         flex-direction: column;
     }
-
-    .address .map{
-        width: 400px;
+    .address-info {
+        width: 250px;
+    }
+    .address .map {
+        width: 300px;
         height: auto;
     }
-
-    .photos{
+    .photos {
         display: none;
     }
-    .main-page__text{
+    .main-page__text {
         display: flex;
         align-items: center;
     }
-    .header button{
+    .header button {
         display: none;
     }
-
-    .media{
+    .media {
         position: fixed;
         bottom: none;
     }
-    .footer{
+    .footer {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         background: #E3E3E3;
     }
-    .footer nav{
+    .footer nav {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         gap: 10px;
     }
-
-    .nav-links,.reason-detail,.testimonial-carousel-inner {
+    .nav-links, .reason-detail, .testimonial-carousel-inner {
         flex-direction: column;
         align-items: center;
     }
@@ -173,6 +181,69 @@
         margin: 0 10px;
     }
     .swiper-navBtn {
+        display: none;
+    }
+    /* MODAL PART */
+    .cons-text__modal h1 {
+        font-size: 24px;
+    }
+    .cons-text__modal p {
+        font-size: 18px;
+    }
+    .cons-text__modal {
+        padding-left: 0;
+        display: block;
+    }
+}
+
+/* Стили для экранов от 768px до 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .main-page__bgImage{
+        background-size: cover;
+    }
+    .nav-bar{
+        display: flex;
+        gap: 0;
+    }
+    .menu li a{
+        font-size: 14px;
+    }
+    .service-detail__img {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-detail__img .img4, .img5 {
+        width: 400px;
+    }
+    .media {
+        position: fixed;
+        bottom: none;
+        right: 100px;
+    }
+    .cons-img{
+        background-size: cover;
+    }
+    .about {
+        flex-direction: column-reverse;
+        gap: 100px; 
+        padding-left: 50px;
+    }
+    .about img {
+        width: 350px;
+    }
+    .address {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .address-info {
+        width: 450px;
+    }
+    .address .map {
+        width: 450px;
+        height: auto;
+    }
+    .photos {
         display: none;
     }
 }
