@@ -125,7 +125,7 @@ let swiper_cert = new Swiper(".cert__slider", {
             slidesPerView: 3,
         },
         1200: {
-            slidesPerView: 5,
+            slidesPerView: 4,
         }
     },
 });
