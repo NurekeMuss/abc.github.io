@@ -111,7 +111,7 @@ header {
 }
 .close-menu {
     top: 20px;
-    right: 20px;
+    right: 50px;
 }
 #check {display: none;}
 
@@ -750,8 +750,6 @@ input {
 
 /* CAROUSEL PROJECT */
 
-
-
 .carousel-text {
     display: flex;
     justify-content: center;
@@ -805,6 +803,14 @@ input {
     background-color: #FFF;
 }
 
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    gap: 25px;
+}
 .image-content,
 .card-content {
     display: flex;
@@ -1224,9 +1230,65 @@ input {
 .address {
     padding-top: 120px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 100px;
+    gap: 28px;
+}
+.addres-info__title{
+    font-weight: 600;
+    font-size: 42px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #151515;
+}
+.addres-info ul li{
+    position: relative;
+    list-style: none;
+    margin-top: 25px;
+}
+.addres-info ul li::after{
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    background-color: #e6e6e6;
+    width: 100%;
+    height: 1px;
+}
+
+.swiper-button-prev::after{
+    content: "" !important;
+}
+.swiper-button-next:after{
+    content: "" !important;
+}
+.swiper-pagination-bullet-active{
+    background: #fff !important;
+    transition: .2s linear;
+    border: 5px solid #ef7f1a;
+}
+
+.addres-info ul li span{
+    margin-top: 50px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #555;
+}
+.addres-info ul li span img{
+    width: 16px;
+    height: 16px;
+}
+.addres-info ul li div{
+    margin-top: 14px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 122%;
+    color: #151515;
 }
 
 .address img {
@@ -1239,16 +1301,10 @@ input {
     opacity: 0px;
 }
 
-.address-info {
-    width: 384px;
-    height: 450.75px;
+.addres-info {
+    background-color: #f5f5f5;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 25px;
-    background: #F5F5F5;
+    padding: 47.5px 45px 100px;
 }
 
 .address-info_detail {
